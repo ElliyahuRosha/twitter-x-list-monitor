@@ -1,0 +1,21 @@
+# --- Secrets & credentials ---
+secrets.json
+x_cookies.json
+*.env
+
+# --- Browser / auth state ---
+.node-persist/
+.wwebjs_auth/
+.wwebjs_cache/
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# --- Optional: local-only bot state ---
+bot1.data.json
+
+whatsapp-bot-poc/
+_IGNORE_bot1/

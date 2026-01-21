@@ -1,0 +1,42 @@
+[
+  {
+    "key": "coalition",
+    "name": "קואליציה",
+    "list_id": "1955251164674441726",
+    "url": "https://x.com/i/lists/1955251164674441726",
+    "db_basename": "tweets_db_Coalition",
+    "telegram_chat_id": "-1002512588736",
+    "whatsappGroup": "קול הקואליציה",
+    "active": true
+  },
+  {
+    "key": "opposition",
+    "name": "אופוזיציה",
+    "list_id": "1955253803730509967",
+    "url": "https://x.com/i/lists/1955253803730509967",
+    "db_basename": "tweets_db_Opposition",
+    "telegram_chat_id": "-1003046796277",
+    "whatsappGroup": "קול האופוזיציה",
+    "active": true
+  },
+  {
+    "key": "yamin",
+    "name": "ימין",
+    "list_id": "1983156234095042924",
+    "url": "https://x.com/i/lists/1983156234095042924",
+    "db_basename": "tweets_db_Yamin",
+    "telegram_chat_id": "-1003218467305",
+    "whatsappGroup": "קולות הימין",
+    "active": true
+  },
+  {
+    "key": "smol",
+    "name": "שמאל",
+    "list_id": "1985343122864255450",
+    "url": "https://x.com/i/lists/1985343122864255450",
+    "db_basename": "tweets_db_Smol",
+    "telegram_chat_id": "-1003287893659",
+    "whatsappGroup": "קולות השמאל",
+    "active": true
+  }
+]

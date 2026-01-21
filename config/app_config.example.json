@@ -1,0 +1,23 @@
+{
+  "browser": {
+    "viewport": { "width": 650, "height": 3000 },
+    "user_agent": "Mozilla/5.0 ...",
+    "accept_language": "en-US,en;q=0.9"
+  },
+  "screenshots": {
+    "dir": "screenshots",
+    "watermark_path": "./watermarking/watermark4.png",
+    "watermark_opacity": 0.3
+  },
+  "lists": [
+    {
+      "id": "israeli_politics",
+      "name": "Israeli Politics",
+      "feed_url": "https://x.com/i/lists/XXXXXXXX",
+      "db": {
+        "basename": "tweets_db_IsraeliPolitics",
+        "dirname": "db"
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+# Tweet Grabber – Multi-List Puppeteer System
+
+## What this project does
+A production-grade Node.js + Puppeteer system that:
+- logs into X (Twitter) using stored cookies
+- scans curated lists
+- detects new tweets deterministically
+- captures pixel-accurate screenshots
+- stores state safely on disk
+- sends results to Telegram
+
+## Why this exists
+Explain the real problem you solved:
+- X has no stable API for this use-case
+- scraping must be robust, deterministic, resumable
+- screenshots must be exact, not “best effort”
+
+## Architecture (High Level)
+- single Chromium instance
+- sequential list processing
+- per-list state isolation
+- global shared browser resources
+
+## Key Design Principles
+- single browser, many logical feeds
+- idempotent DB writes
+- crash-safe restarts
+- zero guessing on tweet identity
+
+## Directory Structure
+(tree output here)
+
+## Example Output
+(images here)
+
+## Tech Stack
+- Node.js
+- Puppeteer
+- Telegram Bot API
+- Linux (headless)
+
+## Disclaimer
+No scraping of private content. Educational / portfolio project.
