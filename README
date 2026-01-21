@@ -1,16 +1,14 @@
-<div align="center">
+# 🛰️ Twitter / X List Monitor
 
-# Twitter / X List Monitor
+**Headless browser–based monitoring of X (Twitter) lists with visual capture & Telegram delivery**
 
-<sup>
-Headless browser–based monitoring of X (Twitter) lists with visual capture & Telegram delivery
-</sup>
+---
 
-<br><br>
+## 📸 Visual Preview
 
-<img src="docs/images/tweet_capture_1.png" width="800">
-
-</div>
+![Tweet capture example 1](docs/images/2026-01-21_13-03.png)
+![Tweet capture example 2](docs/images/2026-01-21_13-04.png)
+![Tweet capture example 3](docs/images/tweet_BarakSeri_1995098138311287087.png)
 
 ---
 
@@ -19,18 +17,17 @@ Headless browser–based monitoring of X (Twitter) lists with visual capture & T
 This project continuously monitors **X (Twitter) Lists** using a **single authenticated browser session**, detects new tweets deterministically, captures **clean visual screenshots** of each tweet, and delivers them to **Telegram channels**.
 
 The system is designed for **long-running, unattended execution**, with strong emphasis on:
-- correctness
-- reproducibility
-- memory efficiency
-- operational robustness
+
+- correctness  
+- reproducibility  
+- memory efficiency  
+- operational robustness  
 
 ---
 
-## 🧠 Architecture Overview
+## 🧩 Architecture Overview
 
-<div align="center">
-  <img src="docs/images/architecture.png" width="900">
-</div>
+![Architecture diagram](docs/images/architecture.png)
 
 ### High-level flow
 
@@ -40,22 +37,6 @@ The system is designed for **long-running, unattended execution**, with strong e
 4. New tweets are persisted to per-list databases
 5. Tweets are rendered, cleaned, and visually captured
 6. Final images are delivered to Telegram
-
----
-
-## 📸 Visual Output Examples
-
-<div align="center">
-  <img src="docs/images/2026-01-21_13-03.png" width="260">
-  <img src="docs/images/2026-01-21_13-04.png" width="260">
-  <img src="docs/images/tweet_BarakSeri_1995098138311287087.png" width="260">
-</div>
-
-Each screenshot is:
-- DOM-cleaned (overlays removed)
-- font-patched for consistency
-- cropped deterministically
-- optionally watermarked
 
 ---
 
@@ -70,7 +51,7 @@ Each screenshot is:
 - **Per-list isolated persistence**  
   Each list has its own database lifecycle
 
-- **Visual capture, not raw text**  
+- **Visual capture (not raw text)**  
   What you see is exactly what gets sent
 
 - **Telegram delivery with retries**  
@@ -85,12 +66,13 @@ Each screenshot is:
 
 All runtime behavior is driven by a **single configuration file**, aggregating:
 
-- global browser settings
-- shared runtime paths
+- global browser settings  
+- shared runtime paths  
 - per-list definitions (URLs, DB naming, output routing)
 
 This allows:
-- easy scaling from 1 → N lists
+
+- scaling from 1 → N lists
 - zero code duplication
 - predictable operational behavior
 
@@ -118,7 +100,8 @@ This project is provided **for educational and technical demonstration purposes 
 ## 👤 Author
 
 Built as a **system-level automation project**, focusing on:
-- browser internals
-- deterministic data collection
-- long-running reliability
-- operational clarity
+
+- browser internals  
+- deterministic data collection  
+- long-running reliability  
+- operational clarity  
