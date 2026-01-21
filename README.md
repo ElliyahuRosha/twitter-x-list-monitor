@@ -11,7 +11,7 @@
 
 | Desktop View | Tweet Capture | Telegram Delivery |
 | :---: | :---: | :---: |
-| ![Capture 1](docs/images/2026-01-21_13-03.png) | ![Capture 2](docs/images/tweet_BarakSeri.png) | ![Telegram](docs/images/tele_screenshot.png) |
+| ![Capture 1](docs/images/2026-01-21_13-03.png) | ![Capture 2](docs/images/tweet_BarakSeri_1995098138311287087.png) | ![Telegram](docs/images/2026-01-21_13-04.png) |
 
 ---
 
