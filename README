@@ -1,43 +1,124 @@
-# Tweet Grabber – Multi-List Puppeteer System
+<div align="center">
 
-## What this project does
-A production-grade Node.js + Puppeteer system that:
-- logs into X (Twitter) using stored cookies
-- scans curated lists
-- detects new tweets deterministically
-- captures pixel-accurate screenshots
-- stores state safely on disk
-- sends results to Telegram
+# Twitter / X List Monitor
 
-## Why this exists
-Explain the real problem you solved:
-- X has no stable API for this use-case
-- scraping must be robust, deterministic, resumable
-- screenshots must be exact, not “best effort”
+<sup>
+Headless browser–based monitoring of X (Twitter) lists with visual capture & Telegram delivery
+</sup>
 
-## Architecture (High Level)
-- single Chromium instance
-- sequential list processing
-- per-list state isolation
-- global shared browser resources
+<br><br>
 
-## Key Design Principles
-- single browser, many logical feeds
-- idempotent DB writes
-- crash-safe restarts
-- zero guessing on tweet identity
+<img src="docs/images/tweet_capture_1.png" width="800">
 
-## Directory Structure
-(tree output here)
+</div>
 
-## Example Output
-(images here)
+---
 
-## Tech Stack
-- Node.js
-- Puppeteer
-- Telegram Bot API
-- Linux (headless)
+## 🧠 Project Overview
 
-## Disclaimer
-No scraping of private content. Educational / portfolio project.
+This project continuously monitors **X (Twitter) Lists** using a **single authenticated browser session**, detects new tweets deterministically, captures **clean visual screenshots** of each tweet, and delivers them to **Telegram channels**.
+
+The system is designed for **long-running, unattended execution**, with strong emphasis on:
+- correctness
+- reproducibility
+- memory efficiency
+- operational robustness
+
+---
+
+## 🧠 Architecture Overview
+
+<div align="center">
+  <img src="docs/images/architecture.png" width="900">
+</div>
+
+### High-level flow
+
+1. Puppeteer launches **one persistent browser**
+2. Authenticated session is restored via cookies
+3. List feeds are scanned incrementally
+4. New tweets are persisted to per-list databases
+5. Tweets are rendered, cleaned, and visually captured
+6. Final images are delivered to Telegram
+
+---
+
+## 📸 Visual Output Examples
+
+<div align="center">
+  <img src="docs/images/2026-01-21_13-03.png" width="260">
+  <img src="docs/images/2026-01-21_13-04.png" width="260">
+  <img src="docs/images/tweet_BarakSeri_1995098138311287087.png" width="260">
+</div>
+
+Each screenshot is:
+- DOM-cleaned (overlays removed)
+- font-patched for consistency
+- cropped deterministically
+- optionally watermarked
+
+---
+
+## ⚙️ Key Characteristics
+
+- **Single-browser architecture**  
+  Multiple lists share one browser → drastic memory reduction
+
+- **Deterministic feed scanning**  
+  No guesswork, no heuristics, no race conditions
+
+- **Per-list isolated persistence**  
+  Each list has its own database lifecycle
+
+- **Visual capture, not raw text**  
+  What you see is exactly what gets sent
+
+- **Telegram delivery with retries**  
+  Rate-limit aware, fault-tolerant
+
+- **Production-oriented design**  
+  Safe restarts, state recovery, defensive timeouts
+
+---
+
+## 🗂 Configuration Model
+
+All runtime behavior is driven by a **single configuration file**, aggregating:
+
+- global browser settings
+- shared runtime paths
+- per-list definitions (URLs, DB naming, output routing)
+
+This allows:
+- easy scaling from 1 → N lists
+- zero code duplication
+- predictable operational behavior
+
+---
+
+## 🧪 Operational Notes
+
+- Designed to run **24/7**
+- Memory usage is bounded and measured
+- Browser crashes trigger clean restarts
+- No reliance on undocumented APIs
+
+---
+
+## ⚠️ Disclaimer
+
+This project is provided **for educational and technical demonstration purposes only**.
+
+- No responsibility is taken for misuse
+- Users are responsible for complying with all applicable laws
+- The project demonstrates automation and system design techniques
+
+---
+
+## 👤 Author
+
+Built as a **system-level automation project**, focusing on:
+- browser internals
+- deterministic data collection
+- long-running reliability
+- operational clarity
